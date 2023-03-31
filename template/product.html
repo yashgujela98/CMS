@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block 'main' %}
+
+<main id="main">
+    <div class="container">
+        <div class="row">
+        
+            <div class="col-md-12 my-5">
+                <table class="table">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Title</th>
+                        <th>Details</th>
+                        <th>Cost</th>
+                        <th>View</th>
+                        
+                    </tr>
+                {% for x in data %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td>{{x.title}}</td>
+                        <td>{{x.details}}</td>
+                        <td>{{x.cost}}</td>
+                        <td><a href="home"><button class="btn btn-warning">View</button></a></td>
+
+                    
+                    </tr>
+                {% endfor %}
+                </table>
+
+            </div><!--Table records end-->
+
+        </div>
+    </div>
+
+</main>
+
+
+{% endblock 'main' %}
